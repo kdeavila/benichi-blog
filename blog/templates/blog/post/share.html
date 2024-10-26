@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block title %}Compartir un posts{% endblock %}
+{% block content %}
+    {% if sent %}
+        <h1>E-mail enviado satisfactoriamente</h1>
+        <p>
+            "{{ post.title }}" Se envio correctamente a: {{ form.cleaned_data.to}}.
+        </p>
+        <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Regresar</a>
+    {% else %}
+        <h1>Compartir "{{ post.title }}" por e-mail</h1>
+        <a href="{% url 'blog:post_list' %}" class="btn btn-primary">Inicio</a>
+        
+        <form action="." method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Enviar E-mail">
+        </form>
+    {% endif %}
+{% endblock %}
