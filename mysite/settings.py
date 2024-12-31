@@ -23,12 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-lzxrmgpz(3!sp%beo@@-&3r1&@ngwckci_wj%7^41^#($*_roi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','benichi.online']
-CSRF_TRUSTED_ORIGINS = [
-    'https://fe36-152-204-159-105.ngrok-free.app',
-]
+ALLOWED_HOSTS = ['*']
 
 
 
