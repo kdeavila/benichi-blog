@@ -29,6 +29,10 @@ My Blog App es una aplicación web construida con Django que permite a los usuar
 - **Etiquetas Personalizadas**:
   - Uso de etiquetas específicas para extender la funcionalidad de las plantillas y hacerlas más flexibles.
 
+## Enlace a la aplicación desplegada
+
+Puedes acceder a la aplicación en el siguiente enlace: [My Blog App en Render](https://my-blog-app-django-2-0.onrender.com)
+
 ## Instalación
 
 1. Clona el repositorio:
