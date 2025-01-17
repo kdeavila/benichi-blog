@@ -1,14 +1,12 @@
-version: '3.9'
-
+version: "3.9"
 services:
   web:
-    build:
-      context: .
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/app
-      - ./db.sqlite3:/app/db.sqlite3
+    build: .
+    command: gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker
     ports:
       - "8000:8000"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+      - ./static:/app/static
     env_file:
       - .env
